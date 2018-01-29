@@ -14,64 +14,65 @@
             android:id="@+id/button13"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="S comme Sushi (53 min.)"
+            android:text="S comme Sushi (53 min.)\n☆☆☆☆☆\nJaponais"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button14"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Lune Sushi (62 min.)"
+            android:text="Lune Sushi (62 min.)\n☆☆☆\nJaponais"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button15"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Jantchi (1h56)"
+            android:text="Jantchi (1h56)\n☆☆☆☆☆\nCoréen"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button17"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="McDonald La Défense (40 min.)"
+            android:text="McDonald La Défense (40 min.)\n☆☆☆☆\nFast Food"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button16"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="KFC La Défense (30 min.)"
+            android:text="KFC La Défense (30 min.)\n☆☆☆\nFast Food"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button18"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Brioche Dorée (26 min.)"
+            android:text="Brioche Dorée (26 min.)\n☆☆☆☆\nSandwicherie"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button19"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Burger King La Défense (38 min.)"
+            android:text="Burger King La Défense (38 min.)\n☆☆☆☆\nFast Food"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button20"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Vapiano La Défense (1h39)"
+            android:text="Vapiano La Défense (1h39)\n☆☆☆☆☆\nCuisine Italienne"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/button21"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Le paradis du fruit (1h15)"
+            android:text="Le paradis du fruit (1h15)\n☆☆☆☆\nBrasserie"
             tools:ignore="HardcodedText" />
     </LinearLayout>
+
 
 </android.support.v4.widget.NestedScrollView>
