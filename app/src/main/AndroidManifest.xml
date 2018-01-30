@@ -20,9 +20,7 @@
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <uses-library android:name="com.google.android.maps" />
 
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling" />
@@ -45,9 +43,15 @@
         <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".MyNotificationPublisher"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>
