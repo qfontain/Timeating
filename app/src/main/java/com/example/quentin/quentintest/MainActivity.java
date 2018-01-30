@@ -1,6 +1,11 @@
 package com.example.quentin.quentintest;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -73,10 +78,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID); // On avait l'intention de le faire, maintenant on la commence de l'enfant (activité actuelle)
                 // Second Call Id est une sorte de TAG pas vraiment important mais il faut le mettre
                 // Définit après les import de packages
+                scheduleNotification(getNotification("Il est temps de partir du resto \uD83D\uDE09"), 3000);
             }
         });
     }
+    // Méthode permettant de faire une notification avec un délai dans le temps en millisecondes
+    private void scheduleNotification(Notification notification, int delay) {
 
+        Intent notificationIntent = new Intent(this, NotificationPublisher.class);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+    }
+    private Notification getNotification(String content) {
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setContentTitle("En route pour une nouvelle aventure !");
+        builder.setContentText(content);
+        builder.setSmallIcon(R.drawable.logo_ping);
+        builder.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
+        return builder.build();
+    }
 
 }
 
