@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
         String[] Places = getResources().getStringArray(R.array.Lieux); // Récupère le tableau du strings.xml dans res values
 
+
+
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 
         navigationbar = findViewById(R.id.imagebutton);
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         navigationbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDrawerLayout.openDrawer(Gravity.HORIZONTAL_GRAVITY_MASK);
+                mDrawerLayout.openDrawer(Gravity.LEFT);
                // header.openDrawer(GravityCompat.START);
             }
         });
@@ -113,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
 //@Override
 //protected void onCreate(Bundle savedInstanceState) {
 
