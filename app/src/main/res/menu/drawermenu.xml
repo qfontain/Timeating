@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/bd" android:title="dashboard" android:icon="@drawable/ic_dashboard_black_24px"/>
-    <item android:id="@+id/event" android:title="Event" android:icon="@drawable/ic_event_black_24px"/>
-    <item android:id="@+id/search" android:title="search" android:icon="@drawable/ic_search_black_24px" />
+    <item android:id="@+id/search" android:title="Time to Eat !"
+        android:color="@color/colorAccent"
+        android:icon="@drawable/ic_restaurant_black_24px"  />
+    <item android:id="@+id/bd" android:title="Friends" android:icon="@drawable/ic_people_black_24px"/>
+    <item android:id="@+id/event" android:title="Achievements" android:icon="@drawable/ic_loyalty_black_24px"/>
     <item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_settings_black_24px"/>
-    <item android:id="@+id/activities" android:title="Activities" android:icon="@drawable/ic_local_activity_black_24px"/>
+    <item android:id="@+id/activities" android:title="Help" android:icon="@drawable/ic_help_black_24px"/>
     <item android:id="@+id/logout" android:title="Logout" android:icon="@drawable/ic_exit_to_app_black_24px"/>
 
 </menu>
