@@ -2,17 +2,21 @@ package com.example.quentin.quentintest;
 
 
 import android.content.Intent;
+import android.content.SyncStats;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TimePicker;
+import android.os.Bundle;
 import android.view.MenuItem;
 
 
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private final static int SECOND_CALL_ID = 1234;
+    ImageButton navigationbar;
     Button button2; // Déclaration d'une variable bouton
     TimePicker timePicker2; // Déclaration d'une variable EditText c'est à dire qui reçoit un texte de l'utilisateur
     AutoCompleteTextView Lieu; // Déclaration d'une variable EditText c'est à dire qui reçoit un texte de l'utilisateur
@@ -33,6 +38,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main); // Lit l'activité principale par rapport au layout (l'affichage)
 
         String[] Places = getResources().getStringArray(R.array.Lieux); // Récupère le tableau du strings.xml dans res values
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+
+        navigationbar = findViewById(R.id.imagebutton);
+
+        navigationbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawerLayout.openDrawer(Gravity.HORIZONTAL_GRAVITY_MASK);
+               // header.openDrawer(GravityCompat.START);
+            }
+        });
+
+
+     /*
+        mToggle= new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+*/
 
         button2 = findViewById(R.id.button2); // Fait la liaison avec le code xml et l'"id" du bouton 2 qui est button2 (voir code XML) android:id
         timePicker2 = findViewById(R.id.timePicker2); // Fait la liaison avec le code xml et l'heure de retour
@@ -81,9 +108,18 @@ public class MainActivity extends AppCompatActivity {
                 // Définit après les import de packages
             }
         });
+
     }
 
 
 }
+//@Override
+//protected void onCreate(Bundle savedInstanceState) {
+
+    //mDrawerLayout.addDrawerListener(mToggle);
+   // mToggle.syncState();
+   // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//}
+
 
 

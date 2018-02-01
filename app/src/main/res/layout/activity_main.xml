@@ -6,107 +6,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id = "@+id/drawer"
-    tools:context="com.example.quentin.quentintest.MainActivity">
+    tools:context="com.example.quentin.quentintest.MainActivity"
+    >
 
-    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_marginBottom="27dp"
+            android:text="RETOUR"
+            android:textColor="#8b1ec15a"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="63dp"
-                android:layout_marginBottom="27dp"
-                android:text="RETOUR"
-                android:textColor="#8b1ec15a"
-                android:textSize="50sp"
-                app:layout_constraintBottom_toTopOf="@+id/textView4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:text="Où ?"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/Lieu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="9dp"
-                android:text="Où ?"
-                android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/Lieu"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginBottom="9dp"
+            android:text="Quand ?"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/timePicker2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Lieu"
+            tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_marginBottom="9dp"
-                android:text="Quand ?"
-                android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/timePicker2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Lieu"
-                tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="174dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="41dp"
+            android:background="@drawable/button2"
+            android:text="Let's go !"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker2"
+            tools:ignore="HardcodedText" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="174dp"
-                android:layout_height="60dp"
-                android:layout_marginBottom="41dp"
-                android:background="@drawable/button2"
-                android:text="Let's go !"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/timePicker2"
-                tools:ignore="HardcodedText" />
+        <TimePicker
+            android:id="@+id/timePicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="158dp"
+            android:layout_marginBottom="36dp"
+            android:timePickerMode="spinner"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <TimePicker
-                android:id="@+id/timePicker2"
-                android:layout_width="wrap_content"
-                android:layout_height="158dp"
-                android:layout_marginBottom="36dp"
-                android:timePickerMode="spinner"
-                app:layout_constraintBottom_toTopOf="@+id/button2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        <AutoCompleteTextView
+            android:id="@+id/Lieu"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:dropDownHeight="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            tools:ignore="HardcodedText,LabelFor" />
 
-            <AutoCompleteTextView
-                android:id="@+id/Lieu"
-                android:layout_width="229dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:dropDownHeight="100dp"
-                app:layout_constraintBottom_toTopOf="@+id/textView5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                tools:ignore="HardcodedText,LabelFor" />
-
-        </android.support.constraint.ConstraintLayout>
-    </android.support.design.widget.CoordinatorLayout>
+        <ImageButton
+            android:id="@+id/imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="516dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/imagebutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.023"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_help"
+            tools:ignore="HardcodedText" />
 
 
+    </android.support.constraint.ConstraintLayout>
     <android.support.design.widget.NavigationView
-        app:headerLayout="@layout/header"
-        android:layout_width = "wrap_content"
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background = "@color/white"
-        app:itemTextColor="@color/colorAccent"
-        app:itemIconTint="@color/gray"
-        app:menu="@menu/drawermenu"
-        android:layout_gravity="start" >
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="always"
+        app:headerLayout="@layout/header"
+        app:itemBackground="@android:color/white"
+        app:itemIconTint="@android:color/black"
+        app:itemTextColor="@android:color/darker_gray"
+        app:menu="@menu/drawermenu">
+
+
+
 
     </android.support.design.widget.NavigationView>
 
