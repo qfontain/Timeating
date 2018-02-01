@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         navigationbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDrawerLayout.openDrawer(Gravity.LEFT);
+                mDrawerLayout.openDrawer(Gravity.START);
                // header.openDrawer(GravityCompat.START);
             }
         });

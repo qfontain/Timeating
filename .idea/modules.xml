@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QuentinTest.iml" filepath="$PROJECT_DIR$/QuentinTest.iml" />
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Timeating.iml" filepath="$PROJECT_DIR$/Timeating.iml" />
-=======
-      <module fileurl="file://C:\Users\Quentin\AndroidStudioProjects\QuentinTest\Timeating.iml" filepath="C:\Users\Quentin\AndroidStudioProjects\QuentinTest\Timeating.iml" />
->>>>>>> 7e55474ab2306dec67a4e1e373929d7cb4df64a8
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
