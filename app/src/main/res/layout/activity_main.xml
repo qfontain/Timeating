@@ -92,16 +92,17 @@
 
         <ImageButton
             android:id="@+id/imagebutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="29dp"
+            android:layout_height="31dp"
             android:layout_marginBottom="516dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/imagebutton"
+            android:icon="@drawable/ic_menu_black_24px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.023"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_help"
+            app:srcCompat="@drawable/ic_menu_black_24px"
             tools:ignore="HardcodedText" />
 
 
