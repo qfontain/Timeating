@@ -20,6 +20,7 @@
 <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
     <item name="spinBars">false</item>
     <item name="color">@android:color/black</item>
+
 </style> 
 
 </resources>

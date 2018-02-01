@@ -2,6 +2,8 @@ package com.example.quentin.quentintest;
 
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,13 +13,15 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TimePicker;
+import android.view.MenuItem;
 
 
 // Le code XML situé en haut permet de faire l'interface graphique
 // On peut designer avec la partie design en glissant les boutons etc mais attention à mettre un bon layout !
 // Regarder bien le code XML car on va lier le code XML et le code en dessous avec findViewbyId
 public class MainActivity extends AppCompatActivity {
-
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
     private final static int SECOND_CALL_ID = 1234;
     Button button2; // Déclaration d'une variable bouton
     TimePicker timePicker2; // Déclaration d'une variable EditText c'est à dire qui reçoit un texte de l'utilisateur
