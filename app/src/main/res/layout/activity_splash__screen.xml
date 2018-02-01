@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     tools:context="com.example.quentin.quentintest.Splash_Screen"
+
     tools:layout_editor_absoluteY="25dp">
+
 
     <ImageView
         android:id="@+id/imageView"
