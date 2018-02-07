@@ -49,6 +49,8 @@
         </activity>
 
         <receiver android:name=".NotificationPublisher" />
+
+        <activity android:name=".Mon_compte"></activity>
     </application>
 
 </manifest>
