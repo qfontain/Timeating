@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Create_account"
+tools:layout_editor_absoluteY="81dp">
+
+<TextView
+    android:id="@+id/textView_login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="41dp"
+    android:layout_marginTop="76dp"
+    android:text="Connexion"
+    android:textColor="#00bb6a"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toTopOf="@+id/editText_user"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/editText_password"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="42dp"
+    android:layout_marginEnd="52dp"
+    android:ems="10"
+    android:inputType="textPassword"
+    app:layout_constraintBottom_toTopOf="@+id/textView_attempt"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView_password"
+    app:layout_constraintTop_toBottomOf="@+id/editText_user" />
+
+<TextView
+    android:id="@+id/textView_username"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="25dp"
+    android:layout_marginStart="62dp"
+    android:text="Nom d'utilisateur"
+    android:textColor="#00bb6a"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="@+id/editText_user"
+    app:layout_constraintEnd_toStartOf="@+id/editText_user"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<EditText
+    android:id="@+id/editText_user"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="12dp"
+    android:layout_marginEnd="52dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    app:layout_constraintBottom_toTopOf="@+id/editText_password"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView_username"
+    app:layout_constraintTop_toBottomOf="@+id/textView_login" />
+
+<TextView
+    android:id="@+id/textView_password"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="50dp"
+    android:layout_marginStart="62dp"
+    android:layout_marginTop="31dp"
+    android:text="Mot de passe"
+    android:textColor="#00bb6a"
+    android:textSize="15sp"
+    app:layout_constraintEnd_toStartOf="@+id/editText_password"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView_username" />
+
+<Button
+    android:id="@+id/button_login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="27dp"
+    android:text="Se connecter"
+    app:layout_constraintBottom_toTopOf="@+id/button2"
+    app:layout_constraintEnd_toEndOf="@+id/button2"
+    app:layout_constraintTop_toBottomOf="@+id/textView_attempt" />
+
+<TextView
+    android:id="@+id/textView_attempt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="35dp"
+    android:layout_marginEnd="11dp"
+    android:text="----"
+    app:layout_constraintBottom_toTopOf="@+id/button_login"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView_attempt_count"
+    app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+<TextView
+    android:id="@+id/textView_attempt_count"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="13dp"
+    android:text="Essai"
+    android:textSize="15sp"
+    app:layout_constraintEnd_toStartOf="@+id/textView_attempt"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView_attempt" />
+
+<Button
+    android:id="@+id/button2"
+    android:layout_width="180dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="96dp"
+    android:background="@android:color/background_light"
+    android:fontFamily="sans-serif"
+    android:text="Créer un compte"
+    android:textAllCaps="false"
+    android:textSize="12sp"
+    android:textStyle="italic"
+    android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/button_login" />
+
+</android.support.constraint.ConstraintLayout>

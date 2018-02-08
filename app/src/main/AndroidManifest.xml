@@ -51,7 +51,8 @@
         <receiver android:name=".NotificationPublisher" />
 
         <activity android:name=".Mon_compte" />
-        <activity android:name=".Informations_consumer"></activity>
+        <activity android:name=".Informations_consumer" />
+        <activity android:name=".Create_account"></activity>
     </application>
 
 </manifest>
