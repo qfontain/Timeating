@@ -223,7 +223,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
                 switch (id) {
                     case R.id.compte:
                         Intent i = new Intent(MainActivity.this, Mon_compte.class);
-                        //startActivity(i);
+                        startActivity(i);
 
                         break;
                     case R.id.achievement:
