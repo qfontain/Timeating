@@ -6,6 +6,7 @@ import android.content.SyncStats;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.MenuInflater;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +29,7 @@ import android.view.MenuItem;
 // Le code XML situé en haut permet de faire l'interface graphique
 // On peut designer avec la partie design en glissant les boutons etc mais attention à mettre un bon layout !
 // Regarder bien le code XML car on va lier le code XML et le code en dessous avec findViewbyId
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
     private DrawerLayout mDrawerLayout;
     private final static int SECOND_CALL_ID = 1234;
     ImageButton navigationbar;
@@ -75,11 +76,14 @@ button_moncompte.setEnabled(false);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 //setOnItemClickListener
         navigationbar = findViewById(R.id.imagebutton);
+        item = findViewById(R.id.compte);
+
         navigationbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mDrawerLayout.openDrawer(Gravity.START);
-               // header.openDrawer(GravityCompat.START);
+
+                // header.openDrawer(GravityCompat.START);
 /*
                 int id = item.getItemId();
                 if (id == R.id.compte) {
@@ -91,10 +95,48 @@ button_moncompte.setEnabled(false);
 
 */
             }
-            });
+        });
 
 
 
+
+/*
+
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+
+
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                return true;
+            }
+
+        });
+
+/*
+        private OnClickListener btnClick = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+            }
+        };
+         @Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    MenuItem item = menu.findItem(R.id.back_item);
+    item.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            YourActivity.this.someFunctionInYourActivity();
+            return true;
+        }
+    });
+    return true;
+}
+
+//passing listener object to button
+        make_move.setOnClickListener(btnClick);
 
 /*
             public void onItemClick(AdapterView<?> parent, View v,
@@ -144,13 +186,13 @@ button_moncompte.setEnabled(false);
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            if(charSequence.toString().equals("")){
-                button2.setEnabled(false);
-                Lieu.setError("Un lieu est requis !");
-            }
-            else{
-                button2.setEnabled(true);
-            }
+                if(charSequence.toString().equals("")){
+                    button2.setEnabled(false);
+                    Lieu.setError("Un lieu est requis !");
+                }
+                else{
+                    button2.setEnabled(true);
+                }
             }
 
             @Override
@@ -161,10 +203,10 @@ button_moncompte.setEnabled(false);
         button2.setOnClickListener(new View.OnClickListener() { // Détection que l'utilisateur a appuyé sur le bouton
             @Override
             public void onClick(View view) { // mis automatiquement quand on écrit button2.setOnClickListener
-            Intent intent = new Intent( // On déclare l'intention de faire une action et plus précisement de passer à une autre activité
-                    MainActivity.this, // On part de ça d'où le .this
-                    ScrollingActivity.class // Pour aller vers cette classe
-            );
+                Intent intent = new Intent( // On déclare l'intention de faire une action et plus précisement de passer à une autre activité
+                        MainActivity.this, // On part de ça d'où le .this
+                        ScrollingActivity.class // Pour aller vers cette classe
+                );
                 startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID); // On avait l'intention de le faire, maintenant on la commence de l'enfant (activité actuelle)
                 // Second Call Id est une sorte de TAG pas vraiment important mais il faut le mettre
                 // Définit après les import de packages
@@ -172,6 +214,43 @@ button_moncompte.setEnabled(false);
         });
 
     }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        return false;
+    }
+
+    private Menu m = null;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        //R.menu.drawermenu est l'id de notre menu
+        inflater.inflate(R.menu.drawermenu, menu);
+        m=menu;
+        return true;
+    }
+
+    @Override
+     public boolean onOptionsItemSelected(MenuItem item)
+    {
+
+        switch (item.getItemId())
+        {
+            case R.id.compte:
+                Intent cinemaIntent = new Intent(this, Mon_compte.class);
+                startActivity(cinemaIntent);
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+
+
 
 /*
 
