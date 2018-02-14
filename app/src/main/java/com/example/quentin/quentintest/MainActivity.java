@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MenuItem.OnMenuIt
     Button button2; // Déclaration d'une variable bouton
     ListView header_layout_2;
     MenuItem item;
+    MenuItem account_item;
     NavigationView navigation;
     TimePicker timePicker2; // Déclaration d'une variable EditText c'est à dire qui reçoit un texte de l'utilisateur
     AutoCompleteTextView Lieu; // Déclaration d'une variable EditText c'est à dire qui reçoit un texte de l'utilisateur
@@ -72,17 +73,14 @@ button_moncompte.setEnabled(false);
 
 
 
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-//setOnItemClickListener
         navigationbar = findViewById(R.id.imagebutton);
-        item = findViewById(R.id.compte);
 
         navigationbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mDrawerLayout.openDrawer(Gravity.START);
-
+initInstances();
                 // header.openDrawer(GravityCompat.START);
 /*
                 int id = item.getItemId();
@@ -214,6 +212,65 @@ public boolean onCreateOptionsMenu(Menu menu) {
         });
 
     }
+    private void initInstances() {
+
+
+        navigation = (NavigationView) findViewById(R.id.navigation_view);
+        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id) {
+                    case R.id.compte:
+                        Intent i = new Intent(MainActivity.this, Mon_compte.class);
+                        //startActivity(i);
+
+                        break;
+                    case R.id.achievement:
+                      //  Intent achi = new Intent(MainActivity.this, Mon_compte.class);
+                     //   startActivity(achi);
+
+                        break;
+                    case R.id.logout:
+                     //   Intent logout = new Intent(MainActivity.this, Mon_compte.class);
+                      //  startActivity(logout);
+
+                        break;
+                    case R.id.settings:
+                       // Intent settings = new Intent(MainActivity.this, Mon_compte.class);
+                       // startActivity(settings);
+
+                        break;
+                    case R.id.time_to_eat:
+                        Intent time_eat = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(time_eat);
+
+                        break;
+                }
+                return false;
+            }
+        });
+
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuItem item = menu.findItem(R.id.compte);
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                Intent cinemaIntent = new Intent(MainActivity.this, Mon_compte.class);
+                startActivity(cinemaIntent);
+            //     MainActivity.this.someFunctionInYourActivity();
+                return true;
+            }
+        });
+        return true;
+    }
+
 
     @Override
     public boolean onMenuItemClick(MenuItem menuItem) {
@@ -223,17 +280,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
     private Menu m = null;
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        super.onCreateOptionsMenu(menu);
-        MenuInflater inflater = getMenuInflater();
-        //R.menu.drawermenu est l'id de notre menu
-        inflater.inflate(R.menu.drawermenu, menu);
-        m=menu;
-        return true;
-    }
 
-    @Override
      public boolean onOptionsItemSelected(MenuItem item)
     {
 
