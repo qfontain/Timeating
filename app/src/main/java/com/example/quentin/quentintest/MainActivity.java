@@ -227,8 +227,8 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
                         break;
                     case R.id.achievement:
-                      //  Intent achi = new Intent(MainActivity.this, Mon_compte.class);
-                     //   startActivity(achi);
+                        Intent achi = new Intent(MainActivity.this, Reussite.class);
+                        startActivity(achi);
 
                         break;
                     case R.id.logout:

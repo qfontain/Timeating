@@ -55,6 +55,7 @@
             android:label="@string/app_name"
         />
         <activity android:name=".Informations"></activity>
+        <activity android:name=".Reussite" />
     </application>
 
 </manifest>
