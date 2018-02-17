@@ -15,7 +15,7 @@ public class Connexion extends AppCompatActivity {
     EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); //
         setContentView(R.layout.activity_connexion);
         button_login = (Button) findViewById(R.id.button_login);
         name = (EditText) findViewById(R.id.editText_user);
