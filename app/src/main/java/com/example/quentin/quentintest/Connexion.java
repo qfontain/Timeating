@@ -11,13 +11,15 @@ import android.widget.EditText;
 
 public class Connexion extends AppCompatActivity {
     Button button_login;
+    Button button_create_account;
     EditText name;
     EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); //
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
         button_login = (Button) findViewById(R.id.button_login);
+        button_create_account = (Button) findViewById(R.id.button_create_account);
         name = (EditText) findViewById(R.id.editText_user);
         password = (EditText) findViewById(R.id.editText_password);
         // Permet de désactiver le bouton lorsque rien n'est rentré
@@ -71,9 +73,19 @@ public class Connexion extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(
                         Connexion.this,
-                        Informations.class
+                        MainActivity.class
                 );
                 startActivityFromChild(Connexion.this,intent,6666);
+            }
+        });
+        button_create_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(
+                        Connexion.this,
+                        Creation_compte.class
+                );
+                startActivityFromChild(Connexion.this,intent,33);
             }
         });
     }

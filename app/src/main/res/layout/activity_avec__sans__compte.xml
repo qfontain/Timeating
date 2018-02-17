@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.quentin.quentintest.Avec_Sans_Compte"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="114dp"
+        android:layout_marginTop="49dp"
+        android:text="Utilisation de l'application"
+        android:textColor="#00bb6a"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_avec_compte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_avec_compte"
+        android:layout_width="174dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="71dp"
+        android:background="@drawable/button2"
+        android:text="Avec compte"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_sans_compte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_sans_compte"
+        android:layout_width="174dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="178dp"
+        android:background="@drawable/button2"
+        android:text="Sans compte"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_avec_compte"
+        tools:ignore="HardcodedText" />
+
+</android.support.constraint.ConstraintLayout>
