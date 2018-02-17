@@ -5,6 +5,7 @@
     <color name="white">#FFFFFF</color>
     <color name="colorAccent">#096A09</color>
     <color name="colortimeating">#00BB6a</color>
+    <color name="colorsecondairetimeating">#00BB61</color>
     <color name="gray">#6c6c6c</color>
     <color name="steel">#7F7F7F</color>
 </resources>
