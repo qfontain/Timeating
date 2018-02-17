@@ -15,7 +15,8 @@
         android:textColor="#00bb6a"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView2"
@@ -27,7 +28,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#00bb6a"
         app:layout_constraintBottom_toTopOf="@+id/checkBox4"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView3"
@@ -39,7 +41,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#00bb6a"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editText"
@@ -61,7 +64,8 @@
         android:text="Restaurant rapide"
         app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText" />
 
     <CheckBox
         android:id="@+id/checkBox2"
@@ -70,7 +74,8 @@
         android:layout_marginStart="41dp"
         android:text="Restaurant gastronomique"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        tools:ignore="HardcodedText" />
 
     <CheckBox
         android:id="@+id/checkBox3"
@@ -78,7 +83,8 @@
         android:layout_height="wrap_content"
         android:text="Pizzeria"
         app:layout_constraintStart_toStartOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5"
+        tools:ignore="HardcodedText" />
 
     <CheckBox
         android:id="@+id/checkBox4"
@@ -86,7 +92,8 @@
         android:layout_height="wrap_content"
         android:text="Café"
         app:layout_constraintBottom_toTopOf="@+id/checkBox"
-        app:layout_constraintStart_toStartOf="@+id/checkBox" />
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        tools:ignore="HardcodedText" />
 
     <CheckBox
         android:id="@+id/checkBox5"
@@ -95,7 +102,8 @@
         android:layout_marginTop="14dp"
         android:text="Brasserie"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/info_taken"
@@ -105,5 +113,6 @@
         android:text="CONFIRMER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 </android.support.constraint.ConstraintLayout>
