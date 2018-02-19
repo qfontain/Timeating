@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.quentin.quentintest.Help">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="291dp"
+            android:src="@drawable/schema_projet_ping" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notre appli a pour but de te permettre de te sentir le plus léger possible lors de ta pause déjeuner, tu arriveras toujours avec le bon timing à tes rendez-vous en suivant la petite aide ci-dessous 😃\n"
+            android:textColor="@android:color/black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. First step : "
+            android:textStyle="bold"
+            android:textColor="#00bb6a"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="284dp"
+            android:src="@drawable/accueil" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Dans la page d'accueil, rentres l'heure à laquelle tu veux revenir en cours ou en réunion ainsi que l'heure voulue il te faudra ! \n Sans oublier de valider 😊"
+            tools:ignore="HardcodedText"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n2. Second step : "
+            android:textStyle="bold"
+            android:textColor="#00bb6a"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="284dp"
+            android:src="@drawable/choix" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Une liste de restaurants compatibles avec ton emploi du temps tu verras alors, il te suffira de choisir celui que tu préfères et de te laisser guider !\n"
+            android:textColor="@android:color/black"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/button_understand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="J'ai compris !"
+            tools:ignore="HardcodedText"
+            android:background="@color/colortimeating"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

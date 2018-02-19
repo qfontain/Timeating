@@ -60,7 +60,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editText_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_username"
-        app:layout_constraintTop_toBottomOf="@+id/textView_login" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_login" ><requestFocus /> </EditText>
 
     <TextView
         android:id="@+id/textView_password"

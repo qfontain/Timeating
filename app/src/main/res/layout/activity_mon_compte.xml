@@ -43,7 +43,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        ><requestFocus /> </EditText>
 
     <Button
         android:id="@+id/button2"
@@ -60,7 +61,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_mail"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,7 +72,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button_password"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

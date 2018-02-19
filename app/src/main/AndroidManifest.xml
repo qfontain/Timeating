@@ -57,7 +57,11 @@
         <activity android:name=".Informations" />
         <activity android:name=".Reussite" />
         <activity android:name=".Avec_Sans_Compte" />
-        <activity android:name=".Creation_compte"></activity>
+        <activity android:name=".Creation_compte" />
+        <activity
+            android:name=".Help"
+            android:label="@string/title_activity_help" />
+        <activity android:name=".Sources_des_datas"></activity>
     </application>
 
 </manifest>
