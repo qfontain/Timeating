@@ -61,7 +61,12 @@
         <activity
             android:name=".Help"
             android:label="@string/title_activity_help" />
-        <activity android:name=".Sources_des_datas"></activity>
+        <activity android:name=".Sources_des_datas" />
+        <activity android:name=".Contact" />
+        <activity android:name=".Confidentiality" />
+        <activity
+            android:name=".CGU"
+            android:label="@string/title_activity_cgu"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.quentin.quentintest.Contact"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="225dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="30dp"
+        android:text="Contact"
+        android:textColor="@color/colortimeating"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textpersonne"
+        android:layout_width="314dp"
+        android:layout_height="186dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
+        android:autoLink="email"
+        android:text="• Sébastien BONCOEUR\n
+• Quentin FONTAINE\n
+• Marina LIN-SI \n
+• Muriel LIN-SI \n
+• Marie MALÉCOT \n
+• Guillaume STASINSKI \n
+
+"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="205dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="23dp"
+        android:text="Développeurs de l’application :\n"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textpersonne"
+        app:layout_constraintEnd_toEndOf="@+id/contact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="205dp"
+        android:layout_height="22dp"
+        android:text="Responsable de publication :\n"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textpersonne" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="318dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="116dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:autoLink="email"
+        android:text="Quentin FONTAINE\nMAURECOURT\n06 88 22 44 65
+
+Pour toute demande, contactez-nous à l’adresse suivante : contact.timeating@gmail.com."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+</android.support.constraint.ConstraintLayout>
