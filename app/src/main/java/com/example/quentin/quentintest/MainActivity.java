@@ -29,7 +29,7 @@ import android.view.MenuItem;
 // Le code XML situé en haut permet de faire l'interface graphique
 // On peut designer avec la partie design en glissant les boutons etc mais attention à mettre un bon layout !
 // Regarder bien le code XML car on va lier le code XML et le code en dessous avec findViewbyId
-public class MainActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
+public class MainActivity extends AppCompatActivity  {
     private DrawerLayout mDrawerLayout;
     private final static int SECOND_CALL_ID = 1234;
     ImageButton navigationbar;
@@ -48,27 +48,6 @@ public class MainActivity extends AppCompatActivity implements MenuItem.OnMenuIt
 
         String[] Places = getResources().getStringArray(R.array.Lieux); // Récupère le tableau du strings.xml dans res values
 
-// rajout 10/02 - test n°1
-
-//        button_moncompte;
-        /*
-button_moncompte = findViewById(R.id.compte);
-button_moncompte.setEnabled(false);
-
-        button_moncompte.setOnClickListener(new View.OnClickListener() { // Détection que l'utilisateur a appuyé sur le bouton
-            @Override
-            public void onClick(View view) { // mis automatiquement quand on écrit button2.setOnClickListener
-                Intent intent = new Intent( // On déclare l'intention de faire une action et plus précisement de passer à une autre activité
-                        MainActivity.this, // On part de ça d'où le .this
-                        Mon_compte.class // Pour aller vers cette classe
-                );
-                startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID); // On avait l'intention de le faire, maintenant on la commence de l'enfant (activité actuelle)
-                // Second Call Id est une sorte de TAG pas vraiment important mais il faut le mettre
-                // Définit après les import de packages
-            }
-        });
-*/
-
 
 
 
@@ -81,87 +60,12 @@ button_moncompte.setEnabled(false);
             public void onClick(View view) {
                 mDrawerLayout.openDrawer(Gravity.START);
 initInstances();
-                // header.openDrawer(GravityCompat.START);
-/*
-                int id = item.getItemId();
-                if (id == R.id.compte) {
-                    Intent cinemaIntent = new Intent (MainActivity.this, Mon_compte.class);
 
-                    startActivity(cinemaIntent);
-                }
-
-
-*/
             }
         });
 
 
 
-
-/*
-
-        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-
-
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-
-                return true;
-            }
-
-        });
-
-/*
-        private OnClickListener btnClick = new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-            }
-        };
-         @Override
-public boolean onCreateOptionsMenu(Menu menu) {
-    MenuItem item = menu.findItem(R.id.back_item);
-    item.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-
-        @Override
-        public boolean onMenuItemClick(MenuItem item) {
-            YourActivity.this.someFunctionInYourActivity();
-            return true;
-        }
-    });
-    return true;
-}
-
-//passing listener object to button
-        make_move.setOnClickListener(btnClick);
-
-/*
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
-                switch (position) {
-                    case 1:
-                        Intent intent= new Intent(MainActivity.this,Mon_compte.class);
-                        startActivity(intent);
-                        break;
-                    case 2:
-
-                    default:
-                        break;
-                }
-
-        });
-       // });
-
-
-     /*
-        mToggle= new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
-        mDrawerLayout.addDrawerListener(mToggle);
-        mToggle.syncState();
-        if(getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-*/
 
         button2 = findViewById(R.id.button2); // Fait la liaison avec le code xml et l'"id" du bouton 2 qui est button2 (voir code XML) android:id
         timePicker2 = findViewById(R.id.timePicker2); // Fait la liaison avec le code xml et l'heure de retour
@@ -232,10 +136,42 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
                         break;
                     case R.id.logout:
+
                      //   Intent logout = new Intent(MainActivity.this, Mon_compte.class);
                       //  startActivity(logout);
 
                         break;
+                    case R.id.help:
+
+                         Intent help = new Intent(MainActivity.this, Help.class);
+                         startActivity(help);
+
+                        break;
+                    case R.id.cgu:
+
+                        Intent cgu = new Intent(MainActivity.this, CGU.class);
+                        startActivity(cgu);
+                        break;
+
+
+                    case R.id.source:
+
+                        Intent source = new Intent(MainActivity.this, Sources_des_datas.class);
+                        startActivity(source);
+                        break;
+                    case R.id.contact:
+
+                        Intent contact = new Intent(MainActivity.this, Contact.class);
+                        startActivity(contact);
+                        break;
+
+                    case R.id.confidentiality:
+
+                        Intent confidentiality = new Intent(MainActivity.this, Confidentiality.class);
+                        startActivity(confidentiality);
+                        break;
+
+
                     case R.id.settings:
                        // Intent settings = new Intent(MainActivity.this, Mon_compte.class);
                        // startActivity(settings);
@@ -252,83 +188,5 @@ public boolean onCreateOptionsMenu(Menu menu) {
         });
 
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem item = menu.findItem(R.id.compte);
-        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-
-                Intent cinemaIntent = new Intent(MainActivity.this, Mon_compte.class);
-                startActivity(cinemaIntent);
-            //     MainActivity.this.someFunctionInYourActivity();
-                return true;
-            }
-        });
-        return true;
-    }
-
-
-    @Override
-    public boolean onMenuItemClick(MenuItem menuItem) {
-        return false;
-    }
-
-    private Menu m = null;
-
-    @Override
-
-     public boolean onOptionsItemSelected(MenuItem item)
-    {
-
-        switch (item.getItemId())
-        {
-            case R.id.compte:
-                Intent cinemaIntent = new Intent(this, Mon_compte.class);
-                startActivity(cinemaIntent);
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-
-
-
-
-/*
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawermenu, menu);
-        return true;
-    }
-
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.compte) {
-            Intent cinemaIntent = new Intent(this, Mon_compte.class);
-            startActivity(cinemaIntent);
-        } else if (id == R.id.help) {
-
-        } else if (id == R.id.achievement) {
-
-        } else if (id == R.id.logout) {
-
-        } else if (id == R.id.time_to_eat) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
-        drawer.closeDrawer(Gravity.START);
-        return true;
-    }
-    */
 
 }

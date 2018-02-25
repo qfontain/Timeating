@@ -9,20 +9,17 @@
         android:title="Time to Eat !" />
 
     <item android:id="@+id/friends" android:title="Friends"  app:showAsAction="never" android:icon="@drawable/ic_people_black_24px"/>
-    <item android:id="@+id/achievement" android:title="Achievements"  app:showAsAction="never" android:icon="@drawable/ic_loyalty_black_24px"/>
+    <item android:id="@+id/achievement" android:title="Récompenses"  app:showAsAction="never" android:icon="@drawable/ic_loyalty_black_24px"/>
 
-    <item
-        android:id="@+id/compte"
-        android:checkable="true"
-        android:enabled="true"
-        android:icon="@drawable/ic_assignment_ind_black_24dp"
-        android:title="Account"
-        android:visible="true" />
-    <item android:id="@+id/settings" android:title="Settings"  app:showAsAction="never" android:icon="@drawable/ic_settings_black_24px"/>
+    <item android:id="@+id/compte" android:icon="@drawable/ic_assignment_ind_black_24dp" android:title="Compte"
+   />
+    <item android:id="@+id/settings" android:title="Paramètres"  app:showAsAction="never" android:icon="@drawable/ic_settings_black_24px"/>
+    <item android:id="@+id/contact" android:title="Contactez-nous ! "  app:showAsAction="never" android:icon="@drawable/ic_call_black_24px"/>
 
-
-    <item android:id="@+id/help" android:title="Help"  app:showAsAction="never" android:icon="@drawable/ic_help_black_24px"/>
-
-    <item android:id="@+id/logout" android:title="Logout"  app:showAsAction="never" android:icon="@drawable/ic_exit_to_app_black_24px"/>
+    <item android:id="@+id/cgu" android:title="CGU"  app:showAsAction="never" android:icon="@drawable/ic_book_black_24px"/>
+    <item android:id="@+id/source" android:title="Sources des données"  app:showAsAction="never" android:icon="@drawable/ic_my_location_black_24px"/>
+    <item android:id="@+id/confidentiality" android:title="Confidentialité"  app:showAsAction="never" android:icon="@drawable/ic_security_black_24px"/>
+    <item android:id="@+id/help" android:title="Aide"  app:showAsAction="never" android:icon="@drawable/ic_help_black_24px"/>
+    <item android:id="@+id/logout" android:title="Déconnexion"  app:showAsAction="never" android:icon="@drawable/ic_exit_to_app_black_24px"/>
 
 </menu>
