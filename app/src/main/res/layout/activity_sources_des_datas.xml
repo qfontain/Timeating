@@ -29,7 +29,7 @@
         android:layout_marginBottom="257dp"
         android:layout_marginEnd="23dp"
         android:layout_marginStart="23dp"
-        android:text="Nous utilisons les données des fournisseurs suivants pour la région de Paris \n\n  • RATP \n\n • Licence ODbL"
+        android:text="Nous utilisons les données des fournisseurs suivants pour la région de Paris \n\n • RATP \n\n • Licence ODbL"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

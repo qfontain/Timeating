@@ -56,7 +56,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textpersonne"
         app:layout_constraintEnd_toEndOf="@+id/contact"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
+        app:layout_constraintTop_toBottomOf="@+id/contact"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView16"
@@ -66,7 +67,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintStart_toStartOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textpersonne" />
+        app:layout_constraintTop_toBottomOf="@+id/textpersonne"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView17"
@@ -82,5 +84,6 @@ Pour toute demande, contactez-nous à l’adresse suivante : contact.timeating@g
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:ignore="HardcodedText" />
 </android.support.constraint.ConstraintLayout>
