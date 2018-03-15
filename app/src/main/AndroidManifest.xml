@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.quentin.quentintest">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,7 +18,8 @@
         android:label="@string/Timeating"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar">
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        tools:targetApi="donut">
         <uses-library android:name="com.google.android.maps" />
 
         <activity android:name=".MainActivity" />
@@ -34,8 +36,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
+            android:value="AIzaSyAXd9deD_MNH4i5NTUbay7cvEqdsMIbwS0" />
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
@@ -66,7 +67,7 @@
         <activity android:name=".Confidentiality" />
         <activity
             android:name=".CGU"
-            android:label="@string/title_activity_cgu"></activity>
+            android:label="@string/title_activity_cgu"/>
     </application>
 
 </manifest>

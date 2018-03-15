@@ -17,13 +17,20 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TimePicker;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.PlaceSelectionListener;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -36,15 +43,17 @@ public class MainActivity extends AppCompatActivity  {
     MenuItem account_item;
     NavigationView navigation;
     TimePicker timePicker2;
-    AutoCompleteTextView Lieu;
-
+    private double latitude;
+    private double longitude;
+    private String ID_resto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] Places = getResources().getStringArray(R.array.Lieux); // Récupère le tableau du strings.xml dans res values
-
+        button2 = findViewById(R.id.button2); // Fait la liaison avec le code xml et l'"id" du bouton 2 qui est button2 (voir code XML) android:id
+        timePicker2 = findViewById(R.id.timePicker2);
+        timePicker2.setIs24HourView(true); // Met le timepicker au format européen
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         navigationbar = findViewById(R.id.imagebutton);
 
@@ -52,46 +61,33 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 mDrawerLayout.openDrawer(Gravity.START);
-initInstances();
+                initInstances();
+            }
+        });
+         // Autocompletion Google
+        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
+                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+        autocompleteFragment.setBoundsBias(new LatLngBounds(
+                new LatLng(48.644522, 1.522519),
+                new LatLng(49.154395, 3.100239)));
+
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(Place place) {
+                // Get info about the selected place.
+                ID_resto = place.getId();
+                latitude = place.getLatLng().latitude;
+                longitude = place.getLatLng().longitude;
+                Toast.makeText(MainActivity.this,ID_resto,Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(Status status) {
+                // Handle the error.
 
             }
         });
 
-        button2 = findViewById(R.id.button2); // Fait la liaison avec le code xml et l'"id" du bouton 2 qui est button2 (voir code XML) android:id
-        timePicker2 = findViewById(R.id.timePicker2);
-        timePicker2.setIs24HourView(true); // Met le timepicker au format européen
-        Lieu = findViewById(R.id.Lieu);
-
-        //On crée la liste d'autocompletion à partir de notre tableau de string appelé Places
-        //android.R.layout.simple_dropdown_item_1line permet de définir le style d'affichage de la liste
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_dropdown_item_1line, Places);
-        //On affecte cette liste d'autocompletion à notre objet d'autocompletion
-        Lieu.setAdapter(adapter);
-
-        button2.setEnabled(false);
-        // Permet de désactiver le bouton lorsque rien n'est rentré
-        Lieu.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(charSequence.toString().equals("")){
-                    button2.setEnabled(false);
-                    Lieu.setError("Un lieu est requis !");
-                }
-                else{
-                    button2.setEnabled(true);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
         button2.setOnClickListener(new View.OnClickListener() { // Détection que l'utilisateur a appuyé sur le bouton
             @Override
             public void onClick(View view) {
@@ -100,6 +96,9 @@ initInstances();
                         ScrollingActivity.class // Pour aller vers cette classe
                 );
                 startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID);
+                intent.putExtra("ID",ID_resto);
+                intent.putExtra("latitude",latitude);
+                intent.putExtra("longitude",longitude);
             }
         });
 
