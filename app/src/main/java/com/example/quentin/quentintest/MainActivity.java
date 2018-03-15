@@ -26,9 +26,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 
-// Le code XML situé en haut permet de faire l'interface graphique
-// On peut designer avec la partie design en glissant les boutons etc mais attention à mettre un bon layout !
-// Regarder bien le code XML car on va lier le code XML et le code en dessous avec findViewbyId
 public class MainActivity extends AppCompatActivity  {
     private DrawerLayout mDrawerLayout;
     private final static int SECOND_CALL_ID = 1234;
@@ -38,19 +35,15 @@ public class MainActivity extends AppCompatActivity  {
     MenuItem item;
     MenuItem account_item;
     NavigationView navigation;
-    TimePicker timePicker2; // Déclaration d'une variable EditText c'est à dire qui reçoit un texte de l'utilisateur
-    AutoCompleteTextView Lieu; // Déclaration d'une variable EditText c'est à dire qui reçoit un texte de l'utilisateur
+    TimePicker timePicker2;
+    AutoCompleteTextView Lieu;
 
-    @Override // Lance ce qu'il y en a en dessous (mis par défaut)
-    protected void onCreate(Bundle savedInstanceState) { // Mis par défaut (c'est grosso modo le main() )
-        super.onCreate(savedInstanceState); // Mis par défaut
-        setContentView(R.layout.activity_main); // Lit l'activité principale par rapport au layout (l'affichage)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         String[] Places = getResources().getStringArray(R.array.Lieux); // Récupère le tableau du strings.xml dans res values
-
-
-
-
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         navigationbar = findViewById(R.id.imagebutton);
@@ -64,13 +57,10 @@ initInstances();
             }
         });
 
-
-
-
         button2 = findViewById(R.id.button2); // Fait la liaison avec le code xml et l'"id" du bouton 2 qui est button2 (voir code XML) android:id
-        timePicker2 = findViewById(R.id.timePicker2); // Fait la liaison avec le code xml et l'heure de retour
+        timePicker2 = findViewById(R.id.timePicker2);
         timePicker2.setIs24HourView(true); // Met le timepicker au format européen
-        Lieu = findViewById(R.id.Lieu); // Idem avec le lieu
+        Lieu = findViewById(R.id.Lieu);
 
         //On crée la liste d'autocompletion à partir de notre tableau de string appelé Places
         //android.R.layout.simple_dropdown_item_1line permet de définir le style d'affichage de la liste
@@ -104,14 +94,12 @@ initInstances();
         });
         button2.setOnClickListener(new View.OnClickListener() { // Détection que l'utilisateur a appuyé sur le bouton
             @Override
-            public void onClick(View view) { // mis automatiquement quand on écrit button2.setOnClickListener
-                Intent intent = new Intent( // On déclare l'intention de faire une action et plus précisement de passer à une autre activité
+            public void onClick(View view) {
+                Intent intent = new Intent(
                         MainActivity.this, // On part de ça d'où le .this
                         ScrollingActivity.class // Pour aller vers cette classe
                 );
-                startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID); // On avait l'intention de le faire, maintenant on la commence de l'enfant (activité actuelle)
-                // Second Call Id est une sorte de TAG pas vraiment important mais il faut le mettre
-                // Définit après les import de packages
+                startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID);
             }
         });
 
