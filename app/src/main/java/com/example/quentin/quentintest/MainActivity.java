@@ -2,27 +2,17 @@ package com.example.quentin.quentintest;
 
 
 import android.content.Intent;
-import android.content.SyncStats;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuInflater;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Gravity;
-import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TimePicker;
-import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.Status;
