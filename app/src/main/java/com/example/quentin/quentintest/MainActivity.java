@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity  {
                 ID_resto = place.getId();
                 latitude = place.getLatLng().latitude;
                 longitude = place.getLatLng().longitude;
-                Toast.makeText(MainActivity.this,ID_resto,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this,ID_resto,Toast.LENGTH_SHORT).show();
             }
 
             @Override
