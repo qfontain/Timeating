@@ -2,8 +2,11 @@ package com.example.quentin.quentintest;
 
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -12,14 +15,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -32,20 +41,28 @@ public class MainActivity extends AppCompatActivity  {
     MenuItem account_item;
     NavigationView navigation;
     TimePicker timePicker2;
-    private double latitude;
-    private double longitude;
-    private String ID_resto;
+
+    private double latitudeRetour;
+    private double longitudeRetour;
+    private String idRetour;
+
+    private FusedLocationProviderClient client;
+    private double latitudeDepart;
+    private double longitudeDepart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Liaisons
         button2 = findViewById(R.id.button2); // Fait la liaison avec le code xml et l'"id" du bouton 2 qui est button2 (voir code XML) android:id
         timePicker2 = findViewById(R.id.timePicker2);
         timePicker2.setIs24HourView(true); // Met le timepicker au format européen
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         navigationbar = findViewById(R.id.imagebutton);
 
+        // Navigation Drawer
         navigationbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,9 +81,9 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onPlaceSelected(Place place) {
                 // Get info about the selected place.
-                ID_resto = place.getId();
-                latitude = place.getLatLng().latitude;
-                longitude = place.getLatLng().longitude;
+                idRetour = place.getId();
+                latitudeRetour = place.getLatLng().latitude;
+                longitudeRetour = place.getLatLng().longitude;
             }
 
             @Override
@@ -76,17 +93,38 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+        // Localisation actuelle de l'utilisateur
+        requestPermission();
+        client = LocationServices.getFusedLocationProviderClient(this);
+
         button2.setOnClickListener(new View.OnClickListener() { // Détection que l'utilisateur a appuyé sur le bouton
             @Override
             public void onClick(View view) {
+                if (ActivityCompat.checkSelfPermission(MainActivity.this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
+                    return;
+                }
+                // Récupération de la localisation actuelle
+                client.getLastLocation().addOnSuccessListener(MainActivity.this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        if(location !=null)
+                        {
+                            latitudeDepart = location.getLatitude();
+                            longitudeDepart = location.getLongitude();
+                        }
+                    }
+                });
+
                 Intent intent = new Intent(
                         MainActivity.this, // On part de ça d'où le .this
                         ScrollingActivity.class // Pour aller vers cette classe
                 );
+                intent.putExtra("idRetour",idRetour);
+                intent.putExtra("latitudeRetour",latitudeRetour);
+                intent.putExtra("longitudeRetour",longitudeRetour);
+                intent.putExtra("latitudeDepart",latitudeDepart);
+                intent.putExtra("longitudeDepart",longitudeDepart);
                 startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID);
-                intent.putExtra("ID",ID_resto);
-                intent.putExtra("latitude",latitude);
-                intent.putExtra("longitude",longitude);
             }
         });
 
@@ -163,5 +201,7 @@ public class MainActivity extends AppCompatActivity  {
         });
 
     }
-
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this,new String[]{ACCESS_FINE_LOCATION},1);
+    }
 }
