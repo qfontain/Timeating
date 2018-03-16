@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity  {
                 ID_resto = place.getId();
                 latitude = place.getLatLng().latitude;
                 longitude = place.getLatLng().longitude;
-                //Toast.makeText(MainActivity.this,ID_resto,Toast.LENGTH_SHORT).show();
             }
 
             @Override
