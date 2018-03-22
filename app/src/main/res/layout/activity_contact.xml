@@ -10,80 +10,31 @@
     <TextView
         android:id="@+id/contact"
         android:layout_width="225dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="24dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
         android:layout_marginStart="23dp"
         android:layout_marginTop="30dp"
         android:text="Contact"
         android:textColor="@color/colortimeating"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/textpersonne"
-        android:layout_width="314dp"
-        android:layout_height="186dp"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginStart="23dp"
-        android:autoLink="email"
-        android:text="• Sébastien BONCOEUR\n
-• Quentin FONTAINE\n
-• Marina LIN-SI \n
-• Muriel LIN-SI \n
-• Marie MALÉCOT \n
-• Guillaume STASINSKI \n
-
-"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="205dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="23dp"
-        android:text="Développeurs de l’application :\n"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textpersonne"
-        app:layout_constraintEnd_toEndOf="@+id/contact"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="205dp"
-        android:layout_height="22dp"
-        android:text="Responsable de publication :\n"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
-        app:layout_constraintStart_toStartOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textpersonne"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="318dp"
         android:layout_height="105dp"
-        android:layout_marginBottom="116dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="368dp"
         android:autoLink="email"
         android:text="Quentin FONTAINE\nMAURECOURT\n06 88 22 44 65
 
 Pour toute demande, contactez-nous à l’adresse suivante : contact.timeating@gmail.com."
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact"
         tools:ignore="HardcodedText" />
 </android.support.constraint.ConstraintLayout>
