@@ -33,6 +33,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAXd9deD_MNH4i5NTUbay7cvEqdsMIbwS0" />
+
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
@@ -63,7 +64,8 @@
         <activity android:name=".Confidentiality" />
         <activity
             android:name=".CGU"
-            android:label="@string/title_activity_cgu"/>
+            android:label="@string/title_activity_cgu" />
+        <activity android:name=".FAQ"></activity>
     </application>
 
 </manifest>

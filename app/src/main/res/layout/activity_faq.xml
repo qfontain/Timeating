@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+    tools:context="com.example.quentin.quentintest.FAQ">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nFAQ "
+            android:textAlignment="center"
+            android:textColor="#00bb6a"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nLe projet Timeating "
+            android:textColor="#00bb6a"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Quelles sont les personnes qui composent l’équipe ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nL’équipe se compose de 6 étudiants de l’École d’Ingénieurs Léonard de Vinci (ESILV) : \n
+    -	Sébastien Boncœur
+    -	Quentin Fontaine
+    -	Marina Lin-Si
+    -	Muriel Lin-Si
+    -	Marie Malécot
+    -	Guillaume Stasinski"
+
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Quelle est la politique du projet ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nTimeating vous propose un vaste choix de restaurants compatibles avec votre emploi du temps ; c’est-à-dire des restaurants suffisamment proches de votre lieu de départ ou d’arrivée pour que vous soyez à l’heure à votre réunion, rendez-vous…"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Quelles ont été les motivations du projet ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nNotre but, en lançant ce projet, était de répondre à une problématique relativement récurrente : comment optimiser le temps de sa pause déjeuner ou encore comment gagner du temps au moment de choisir un restaurant ?"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Comment a démarré le projet ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nTimeating a vu le jour dans le cadre d’un projet étudiant. \nL’idée est née d’un constat personnel : nous perdons énormément de temps le midi pour savoir dans quel restaurant nous allons manger. \n\nC’est alors que nous avons pensé à une application capable de repérer les restaurants alentours disposant de temps d’attente suffisamment courts pour que nous puissions être à l’heure à notre cours de l’après-midi."
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nL'application Timeating "
+            android:textColor="#00bb6a"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Où et comment puis-je utiliser Timeating ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nPour pouvoir utiliser Timeating c’est très simple : il vous suffit d’avoir accès à une connexion internet et d’autoriser Timeating à accéder aux services de géolocalisation de votre smartphone."
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Comment fonctionne l’application ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nUn onglet « Help » est à votre disposition dans le Menu déroulant situé à gauche de votre écran."
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Comment fonctionne le système de récompenses ?  "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nDifférents systèmes de récompense ont été imaginés : une récompense peut vous être attribuée en fonction des kilomètres parcourus, du nombre ou du type de restaurants dans lesquels vous avez mangé…"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Mes données personnelles sont-elles protégées ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nL’ensemble des données collectées puis traitées par Timeating restent confidentielles et sous la propriété de Timeating."
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n • Est-ce que Timeating m’espionne ? "
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nTimeating vous aide à trouver un restaurant compatible avec votre emploi du temps. Si vous décidez de vous créer un compte sur le portail de l’application, seules des questions pour déterminer vos préférences en termes de restauration vous seront posées. "
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
