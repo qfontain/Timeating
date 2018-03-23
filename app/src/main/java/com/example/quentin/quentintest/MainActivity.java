@@ -36,9 +36,7 @@ public class MainActivity extends AppCompatActivity  {
     private final static int SECOND_CALL_ID = 1234;
     ImageButton navigationbar;
     Button button2; // Déclaration d'une variable bouton
-    ListView header_layout_2;
-    MenuItem item;
-    MenuItem account_item;
+
     NavigationView navigation;
     TimePicker timePicker2;
 
