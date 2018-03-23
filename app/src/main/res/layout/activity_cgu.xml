@@ -26,10 +26,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="\n Les présentes conditions générales d’utilisation (CGU) ont pour objet l’encadrement juridique des modalités de mise à disposition de l’application mobile et des services qui y sont liés et de définir les conditions d’accès  et d’utilisation de ces services par l’ « Utilisateur ».
-En utilisant notre application sur votre terminal, vous déclarez avoir préalablement pris connaissance et accepté sans réserve ni restriction les CGU définies ci-après ainsi que la charte de confidentialité correspondante. Lors de l’inscription sur l’application mobile, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « je reconnais avoir lu et compris les CGU et je les accepte ».
-En cas de non-acceptation des CGU, l’Utilisateur ne pourra pas accéder à l’utilisation des services proposées par l’application mobile.
-TIMEATING se réserve le droit de modifier unilatéralement et  à tour moment le contenu  des présentes CGU."
+            android:text="\n Les présentes conditions générales d’utilisation (CGU) ont pour objet l’encadrement juridique des modalités de mise à disposition de l’application mobile et des services qui y sont liés et de définir les conditions d’accès  et d’utilisation de ces services par l’ « Utilisateur ». \n En utilisant notre application sur votre terminal, vous déclarez avoir préalablement pris connaissance et accepté sans réserve ni restriction les CGU définies ci-après ainsi que la charte de confidentialité correspondante. \nLors de l’inscription sur l’application mobile, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « je reconnais avoir lu et compris les CGU et je les accepte ».
+\nEn cas de non-acceptation des CGU, l’Utilisateur ne pourra pas accéder à l’utilisation des services proposées par l’application mobile.
+TIMEATING se réserve le droit de modifier unilatéralement et à tour moment le contenu des présentes CGU."
             android:textColor="@android:color/black"
             android:textSize="13sp"
             android:textStyle="italic"
@@ -50,7 +49,7 @@ TIMEATING se réserve le droit de modifier unilatéralement et  à tour moment l
             android:layout_height="wrap_content"
             android:text="Timeating facilite le quotidien de ses utilisateurs en leur proposant un large de choix de restaurants compatibles avec leur emploi du temps."
             android:textColor="@android:color/black"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:textStyle="italic"
             tools:ignore="HardcodedText" />
 
@@ -87,7 +86,7 @@ TIMEATING se réserve le droit de modifier unilatéralement et  à tour moment l
             android:layout_height="wrap_content"
             android:text="Pour accéder à Timeating, vous devez disposer du système d’exploitation Android."
             android:textColor="@android:color/black"
-            android:textSize="13sp"
+            android:textSize="12sp"
 
             tools:ignore="HardcodedText" />
 
