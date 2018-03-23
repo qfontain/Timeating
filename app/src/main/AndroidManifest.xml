@@ -65,7 +65,7 @@
         <activity
             android:name=".CGU"
             android:label="@string/title_activity_cgu" />
-        <activity android:name=".FAQ"></activity>
+        <activity android:name=".FAQ" />
     </application>
 
 </manifest>

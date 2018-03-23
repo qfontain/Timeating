@@ -136,4 +136,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_cgu">CGU</string>
+    <string name="title_activity_cgu_revision">activity_cgu_revision</string>
 </resources>
