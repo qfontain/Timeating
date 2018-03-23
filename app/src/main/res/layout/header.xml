@@ -2,11 +2,11 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:background="@drawable/main_header"
-    android:minWidth="100dp"
+    android:layout_height="90dp"
+    android:background="@drawable/main__header_title"
+
     android:orientation="vertical"
-    android:padding="2dp">
+   >
 
 
 </android.support.constraint.ConstraintLayout>

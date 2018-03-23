@@ -148,6 +148,13 @@ public class MainActivity extends AppCompatActivity  {
                         startActivity(achi);
 
                         break;
+
+                    case R.id.faq:
+                        Intent faq = new Intent(MainActivity.this, FAQ.class);
+                        startActivity(faq);
+
+                        break;
+
                     case R.id.logout:
 
                      //   Intent logout = new Intent(MainActivity.this, Mon_compte.class);
