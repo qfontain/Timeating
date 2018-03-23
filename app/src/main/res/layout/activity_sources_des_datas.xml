@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="225dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="22dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="217dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="Sources de données"
         android:textColor="@color/colortimeating"
         android:textSize="22sp"
@@ -25,11 +25,15 @@
     <TextView
         android:id="@+id/textView14"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="257dp"
+        android:layout_height="265dp"
+        android:layout_marginBottom="197dp"
         android:layout_marginEnd="23dp"
         android:layout_marginStart="23dp"
-        android:text="Nous utilisons les données des fournisseurs suivants pour la région de Paris \n\n • RATP \n\n • Licence ODbL"
+        android:text="Nous utilisons les données des fournisseurs suivants pour la région de Paris
+        \n\n • Licence ODbL - RATP
+        \n\n • MIT License - Copyright (c) 2018 m-wrzr
+        \n\n • Creative Commons Attribution 3.0 Unported License
+        \n\n • MIT License - PHP Simple HTML DOM Parser"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
