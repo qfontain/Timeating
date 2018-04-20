@@ -9,25 +9,24 @@
 
     <TextView
         android:id="@+id/contact"
-        android:layout_width="225dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="27dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="32dp"
         android:text="Contact"
         android:textColor="@color/colortimeating"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView17"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="318dp"
-        android:layout_height="105dp"
-        android:layout_marginBottom="368dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="395dp"
         android:autoLink="email"
         android:text="Pour toute demande, contactez-nous à l’adresse suivante : contact.timeating@gmail.com."
         app:layout_constraintBottom_toBottomOf="parent"

@@ -8,16 +8,18 @@
 
     <TextView
         android:id="@+id/conf2"
-        android:layout_width="225dp"
-        android:layout_height="37dp"
+        android:layout_width="147dp"
+        android:layout_height="31dp"
         android:layout_marginBottom="22dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="104dp"
         android:layout_marginTop="30dp"
         android:text="Confidentialité"
         android:textColor="@color/colortimeating"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/conf"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
@@ -31,7 +33,7 @@
         android:layout_marginStart="23dp"
         android:autoLink="email"
         android:text="Toute donnée personnelle collectée par Timeating sera traitée et conservée conformément à la loi N°78-017 du 6 janvier 1978 relative à l'Informatique, aux Fichiers et aux Libertés modifiée.
-\nL’utilisateur dispose donc d’un droit d’opposition, d’accès et de rectification de ses données personnelles. \n\nPour cela, il lui suffit d’envoyer une demande à l’adresse suivante : contact.timeating@gmail.com.
+\n\nL’utilisateur dispose donc d’un droit d’opposition, d’accès et de rectification de ses données personnelles. \n\nPour cela, il lui suffit d’envoyer une demande à l’adresse suivante : contact.timeating@gmail.com.
 "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
