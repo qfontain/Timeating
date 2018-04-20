@@ -26,8 +26,8 @@
         android:id="@+id/editText_password"
         android:layout_width="128dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="62dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="63dp"
+        android:layout_marginEnd="42dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/button_login"
@@ -39,60 +39,65 @@
         android:id="@+id/textView_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="39dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="44dp"
         android:text="Nom d'utilisateur"
         android:textColor="#00bb6a"
         android:textSize="15sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText_user"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_user"
         app:layout_constraintEnd_toStartOf="@+id/editText_user"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editText_user"
-        android:layout_width="128dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="46dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="42dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editText_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_username"
-        app:layout_constraintTop_toBottomOf="@+id/textView_login" ><requestFocus /> </EditText>
+        app:layout_constraintTop_toBottomOf="@+id/textView_login">
+
+        <requestFocus />
+    </EditText>
 
     <TextView
         android:id="@+id/textView_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="53dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="55dp"
         android:text="Mot de passe"
         android:textColor="#00bb6a"
         android:textSize="15sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_password"
         app:layout_constraintEnd_toStartOf="@+id/editText_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText_password"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
-        android:layout_marginEnd="27dp"
+        android:layout_width="174dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/button2"
         android:text="Se connecter"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/button_create_account"
-        app:layout_constraintEnd_toEndOf="@+id/button_create_account"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_password"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/button_create_account"
         android:layout_width="180dp"
-        android:layout_height="0dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="91dp"
         android:background="@android:color/background_light"
         android:fontFamily="sans-serif"

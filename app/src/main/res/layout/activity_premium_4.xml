@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.quentin.quentintest.Premium_4">
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="54dp"
+    android:layout_marginTop="29dp"
+    android:text="SÉLECTION"
+    android:textColor="#00bb6a"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toTopOf="@+id/scrollView4"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/buttonprem4"
+    android:layout_width="174dp"
+    android:layout_height="68dp"
+    android:background="@drawable/button2"
+    android:layout_marginBottom="76dp"
+    android:text="Lancer sondage"
+    android:textColor="@android:color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+    tools:ignore="HardcodedText" />
+
+<ScrollView
+    android:id="@+id/scrollView4"
+    android:layout_width="226dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="61dp"
+    app:layout_constraintBottom_toTopOf="@+id/buttonprem4"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="226dp"
+        android:layout_height="225dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="135dp">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fratellini Caffe" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pacific Pizza" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vapiano" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mc Donald's La Défense" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chipotle" />
+
+        <CheckBox
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:text="Mongoo" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toast and Pizz" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hippopotamus" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KFC La Défense" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiger Wok" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lune Sushi" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza Hut" />
+    </LinearLayout>
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mon Compte"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colortimeating"
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -46,10 +46,10 @@
 
     <Button
         android:id="@+id/button_confirmation_creation_compte"
-        android:layout_width="wrap_content"
-        android:layout_height="51dp"
+        android:layout_width="174dp"
+        android:layout_height="68dp"
+        android:background="@drawable/button2"
         android:layout_marginTop="80dp"
-        android:background="#00bb6a"
         android:text="CONFIRMER"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"

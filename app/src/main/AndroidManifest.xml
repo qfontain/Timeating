@@ -66,6 +66,13 @@
             android:name=".CGU"
             android:label="@string/title_activity_cgu" />
         <activity android:name=".FAQ" />
+        <activity android:name=".Invitation_1" />
+        <activity android:name=".Invitation_2" />
+        <activity android:name=".Invitation_3" />
+        <activity android:name=".Premium_1" />
+        <activity android:name=".Premium_2" />
+        <activity android:name=".Premium_3" />
+        <activity android:name=".Premium_4"></activity>
     </application>
 
 </manifest>

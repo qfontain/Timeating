@@ -107,8 +107,10 @@
 
     <Button
         android:id="@+id/info_taken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="174dp"
+        android:layout_height="68dp"
+        android:background="@drawable/button2"
+        android:textColor="@android:color/white"
         android:layout_marginBottom="30dp"
         android:text="CONFIRMER"
         app:layout_constraintBottom_toBottomOf="parent"

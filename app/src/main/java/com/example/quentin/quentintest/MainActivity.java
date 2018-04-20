@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity  {
 
     NavigationView navigation;
     TimePicker timePicker2;
-
     private double latitudeRetour;
     private double longitudeRetour;
     private String idRetour;
@@ -117,6 +116,8 @@ public class MainActivity extends AppCompatActivity  {
                         MainActivity.this, // On part de ça d'où le .this
                         ScrollingActivity.class // Pour aller vers cette classe
                 );
+                intent.putExtra("heure_retour",timePicker2.getHour());
+                intent.putExtra("minute_retour",timePicker2.getMinute());
                 intent.putExtra("idRetour",idRetour);
                 intent.putExtra("latitudeRetour",latitudeRetour);
                 intent.putExtra("longitudeRetour",longitudeRetour);

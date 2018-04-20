@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.quentin.quentintest.Invitation_3">
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="41dp"
+    android:text="\nSondage de Marie"
+    android:textAlignment="center"
+    android:textColor="#00bb6a"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="HardcodedText" />
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="21dp"
+    android:layout_marginEnd="22dp"
+    android:layout_marginStart="22dp"
+    android:text="\nDans quel(s) restaurant(s) \npréférez-vous manger ?"
+    android:textAlignment="center"
+    android:textColor="@android:color/black"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView"
+    tools:ignore="HardcodedText" />
+<Button
+    android:id="@+id/vote"
+    android:layout_width="174dp"
+    android:layout_height="68dp"
+    android:background="@drawable/button2"
+    android:layout_marginBottom="55dp"
+    android:text="Voter"
+    android:textColor="@android:color/background_light"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/checkBox3"
+    tools:ignore="HardcodedText" />
+    <CheckBox
+    android:id="@+id/checkBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Fratellini Caffe"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:ignore="HardcodedText" />
+<CheckBox
+    android:id="@+id/checkBox2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pacific Pizza"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+    app:layout_constraintStart_toStartOf="@+id/checkBox"
+    app:layout_constraintTop_toBottomOf="@+id/textView2"
+    tools:ignore="HardcodedText" />
+<CheckBox
+    android:id="@+id/checkBox3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="121dp"
+    android:text="Vapiano"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toTopOf="@+id/vote"
+    app:layout_constraintStart_toStartOf="@+id/checkBox2"
+    app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+    tools:ignore="HardcodedText" />
+</android.support.constraint.ConstraintLayout>

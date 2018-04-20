@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.quentin.quentintest.Premium_2">
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="60dp"
+    android:layout_marginTop="29dp"
+    android:text="Choisir mes invités"
+    android:textColor="#00bb6a"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="HardcodedText" />
+
+<Button
+    android:id="@+id/buttonprem2"
+    android:layout_width="174dp"
+    android:layout_height="68dp"
+    android:background="@drawable/button2"
+    android:layout_marginBottom="76dp"
+    android:text="Suivant"
+    android:textColor="@android:color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+    tools:ignore="HardcodedText" />
+
+<ScrollView
+    android:id="@+id/scrollView3"
+    android:layout_width="226dp"
+    android:layout_height="0dp"
+    android:layout_marginBottom="55dp"
+    app:layout_constraintBottom_toTopOf="@+id/buttonprem2"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="226dp"
+        android:layout_height="225dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="135dp">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quentin Fontaine"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marie Malécot"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Muriel Lin-si"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guillaume Stasinski"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marina Lin_si"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:text="Sébastien Boncoeur"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jane Doe"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Theresa May"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Donald Trump"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emmanuel Macron"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dominique Strauss"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

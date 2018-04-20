@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.quentin.quentintest.Invitation_1">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="\nInvitations "
+        android:textAlignment="center"
+        android:textColor="#00bb6a"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/Mary"
+        android:text="\n Marie Malécot souhaite vous inviter à déjeuner le 15/05/2018 à 12:00"
+        android:textAlignment="viewStart"
+        android:background="@android:color/white"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="\n Guillaume Stasinski souhaite vous inviter à déjeuner le 18/05/2018 à 12:30"
+        android:textAlignment="viewStart"
+        android:background="@android:color/white"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <Button
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="80dp"
+        android:text="\n Muriel Lin-Si souhaite vous inviter à déjeuner le 25/05/2018 à 12:15"
+        android:textAlignment="viewStart"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
