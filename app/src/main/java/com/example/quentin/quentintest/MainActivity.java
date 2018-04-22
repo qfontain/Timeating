@@ -145,8 +145,19 @@ public class MainActivity extends AppCompatActivity  {
                     case R.id.achievement:
                         Intent achi = new Intent(MainActivity.this, Reussite.class);
                         startActivity(achi);
-
                         break;
+
+                    case R.id.invitations:
+                        Intent invitation = new Intent(MainActivity.this, Invitation_1.class);
+                        startActivity(invitation);
+                        break;
+
+                    case R.id.premium:
+                        Intent premium = new Intent(MainActivity.this, Premium_1.class);
+                        startActivity(premium);
+                        break;
+
+
 
                     case R.id.faq:
                         Intent faq = new Intent(MainActivity.this, FAQ.class);

@@ -7,8 +7,9 @@
         app:showAsAction="never"
         android:icon="@drawable/ic_restaurant_black_24px"
         android:title="Time to Eat !" />
-
-    <item android:id="@+id/friends" android:title="Friends"  app:showAsAction="never" android:icon="@drawable/ic_people_black_24px"/>
+    <item android:id="@+id/premium" android:title="Premium"  app:showAsAction="never" android:icon="@drawable/ic_star_black_24dp"/>
+    <item android:id="@+id/contact_friend" android:title="Contacts"  app:showAsAction="never" android:icon="@drawable/ic_people_black_24px"/>
+    <item android:id="@+id/invitations" android:title="Invitation"  app:showAsAction="never" android:icon="@drawable/ic_insert_invitation_black_24dp"/>
     <item android:id="@+id/achievement" android:title="Récompenses"  app:showAsAction="never" android:icon="@drawable/ic_loyalty_black_24px"/>
 
     <item android:id="@+id/compte" android:icon="@drawable/ic_assignment_ind_black_24dp" android:title="Compte"
