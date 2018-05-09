@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar"
+        tools:replace="android:label"
         tools:targetApi="donut">
         <uses-library android:name="com.google.android.maps" />
 
@@ -34,10 +35,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAXd9deD_MNH4i5NTUbay7cvEqdsMIbwS0" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:value=" AIzaSyCCbhwvj_4IUkpaSihB4V25zqW7ujiYU20 " />
         <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -72,7 +69,8 @@
         <activity android:name=".Premium_1" />
         <activity android:name=".Premium_2" />
         <activity android:name=".Premium_3" />
-        <activity android:name=".Premium_4"></activity>
+        <activity android:name=".Premium_4" />
+        <activity android:name=".Navigation_Citymapper"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+    android:id="@+id/City"
+    android:icon="@drawable/citymapper"
+    android:title = "Citymapper"
+    tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/Maps"
+        android:icon="@drawable/maps"
+        android:title = "Google Maps"
+        tools:ignore="HardcodedText" />
+</menu>
