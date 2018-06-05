@@ -123,7 +123,11 @@ public class MainActivity extends AppCompatActivity  {
                 intent.putExtra("longitudeRetour",longitudeRetour);
                 intent.putExtra("latitudeDepart",latitudeDepart);
                 intent.putExtra("longitudeDepart",longitudeDepart);
-                startActivityFromChild(MainActivity.this,intent,SECOND_CALL_ID);
+
+                Intent i = new Intent(MainActivity.this, ActivityFilter.class);
+                i.putExtra("latitudeRetour",latitudeRetour);
+                i.putExtra("longitudeRetour",longitudeRetour);
+                startActivityFromChild(MainActivity.this,i,SECOND_CALL_ID);
             }
         });
 

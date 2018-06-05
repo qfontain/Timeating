@@ -1,79 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     tools:context="com.example.quentin.quentintest.ScrollingActivity">
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_height="match_parent"
+        android:id='@+id/recycleView'
+        android:scrollbars="vertical"
 
-        <Button
-            android:id="@+id/button13"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="S comme Sushi (53 min.)\n☆☆☆☆☆\nJaponais"
-            tools:ignore="HardcodedText" />
+        ></android.support.v7.widget.RecyclerView>
 
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Lune Sushi (62 min.)\n☆☆☆\nJaponais"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/button15"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Jantchi (1h56)\n☆☆☆☆☆\nCoréen"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/button17"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="McDonald La Défense (40 min.)\n☆☆☆☆\nFast Food"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/button16"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="KFC La Défense (30 min.)\n☆☆☆\nFast Food"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Brioche Dorée (26 min.)\n☆☆☆☆\nSandwicherie"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/button19"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Burger King La Défense (38 min.)\n☆☆☆☆\nFast Food"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/button20"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Vapiano La Défense (1h39)\n☆☆☆☆☆\nCuisine Italienne"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            android:id="@+id/button21"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Le paradis du fruit (1h15)\n☆☆☆☆\nBrasserie"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-
-
-</android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

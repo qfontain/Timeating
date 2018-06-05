@@ -20,7 +20,7 @@ public class Navigation_Citymapper extends AppCompatActivity {
         latitudeRetour = getIntent().getDoubleExtra("latitudeRetour",0);
         longitudeRetour = getIntent().getDoubleExtra("longitudeRetour",0);
         WebView webView = (WebView) findViewById(R.id.webView);
-        webView.loadUrl("https://citymapper.com/directions?startcoord="+latitudeDepart +"," + longitudeDepart + "&endcoord="+ latitudeRetour +"," + longitudeRetour);
+        webView.loadUrl("https://citymapper.com/directions?startcoord="+latitudeDepart +"," + longitudeDepart + "&endcoord="+ latitudeRetour +"," + longitudeRetour+"&lang=fr");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
 
