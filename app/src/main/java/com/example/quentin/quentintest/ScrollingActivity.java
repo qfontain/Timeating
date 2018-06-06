@@ -108,6 +108,7 @@ public class ScrollingActivity extends Activity {
     private double latitudeRetour;
     private double longitudeRetour;
     private final static int FIRST_CALL_ID = 12;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,7 +135,7 @@ public class ScrollingActivity extends Activity {
         layoutManager = new GridLayoutManager(this, 1);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new RecyclerAdapter(arrayList);
+        adapter = new RecyclerAdapter(arrayList,context);
         recyclerView.setAdapter(adapter);
 
         fireYourAsyncTask();
@@ -143,7 +144,7 @@ public class ScrollingActivity extends Activity {
             @Override
             public void run() {
                 for (int i = 0; i < list.size(); i++) {
-                    new ReadJSON().execute("http://192.168.43.161/python.php", list.get(i));
+                    new ReadJSON().execute("http://192.168.0.40/python.php", list.get(i));
                 }
             }
         });
@@ -480,7 +481,7 @@ public class ScrollingActivity extends Activity {
 
 
     // Méthodes permettant de faire une notification avec un délai dans le temps en millisecondes
-    private void scheduleNotification(Notification notification, int delay) {
+    public void scheduleNotification(Notification notification, int delay) {
 
         Intent notificationIntent = new Intent(this, NotificationPublisher.class);
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
@@ -491,7 +492,7 @@ public class ScrollingActivity extends Activity {
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
     }
-    private Notification getNotification(String content) {
+    public Notification getNotification(String content) {
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("En route pour une nouvelle aventure !");
         builder.setContentText(content);
@@ -500,7 +501,7 @@ public class ScrollingActivity extends Activity {
         return builder.build();
     }
     // Méthode permettant de montrer le menu du bas et qui gère
-    private void showMenu(CharSequence name)
+    public void showMenu(CharSequence name)
     {
         content = (String)name;
         SheetMenu.with(this)

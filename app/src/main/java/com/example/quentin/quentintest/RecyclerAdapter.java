@@ -39,15 +39,17 @@ import ru.whalemare.sheetmenu.SheetMenu;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    private List<Restaurants> restaurantsList = new ArrayList<>();
+    public static List<Restaurants> restaurantsList = new ArrayList<>();
     private String content;
     private double latitudeDepart;
     private double longitudeDepart;
     private final static int FIRST_CALL_ID = 12;
+    private static Context context;
 
 
-    public RecyclerAdapter(List<Restaurants> restaurantsList) {
+    public RecyclerAdapter(List<Restaurants> restaurantsList, Context context) {
         this.restaurantsList = restaurantsList;
+        this.context = context;
     }
 
     @Override
@@ -105,7 +107,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return restaurantsList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView Album;
         TextView Name;
         TextView Adress;
@@ -113,16 +115,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         TextView Phone_Number;
         Button Temps_Attente;
         Button Temps_Trajet;
+        Context ctx;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            Album= itemView.findViewById(R.id.album);
+            Album = itemView.findViewById(R.id.album);
             Rating = itemView.findViewById(R.id.rating);
             Name = itemView.findViewById(R.id.name);
             Adress = itemView.findViewById(R.id.adress);
             Phone_Number = itemView.findViewById(R.id.phone_number);
             Temps_Attente = itemView.findViewById(R.id.temps_attente);
             Temps_Trajet = itemView.findViewById(R.id.temps_trajet);
+            ctx=context;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            String nom = restaurantsList.get(position).name + " " + restaurantsList.get(position).address;
+            //nom = nom.replaceAll("[�]+","é");
+            ScrollingActivity activity = new ScrollingActivity();
+            activity.showMenu(nom);
         }
     }
 
