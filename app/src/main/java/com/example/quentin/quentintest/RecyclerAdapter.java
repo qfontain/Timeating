@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,10 +42,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public static List<Restaurants> restaurantsList = new ArrayList<>();
     private String content;
-    private double latitudeDepart;
-    private double longitudeDepart;
+    public static double latitudeRetour;
+    public static double longitudeRetour;
     private final static int FIRST_CALL_ID = 12;
-    private static Context context;
+    ScrollingActivity scrollingActivity = new ScrollingActivity();
+    Context context = scrollingActivity.context;
+    Context context1;
+    RecyclerView recyclerView = scrollingActivity.recyclerView;
+    View view;
+    LinearLayout linearLayout;
 
 
     public RecyclerAdapter(List<Restaurants> restaurantsList, Context context) {
@@ -61,7 +67,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         Restaurants restaurants = restaurantsList.get(position);
 
         String url1 = "";
@@ -99,7 +105,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             holder.Temps_Trajet.setText("Temps de trajet indispo.");
         else
             holder.Temps_Trajet.setText(restaurants.getTravelTime()+" min de trajet");
-
+        context1 =  holder.Album.getContext();
     }
 
     @Override
@@ -107,7 +113,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return restaurantsList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView Album;
         TextView Name;
         TextView Adress;
@@ -115,10 +121,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         TextView Phone_Number;
         Button Temps_Attente;
         Button Temps_Trajet;
-        Context ctx;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(final View itemView) {
             super(itemView);
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.linearLayout);
             Album = itemView.findViewById(R.id.album);
             Rating = itemView.findViewById(R.id.rating);
             Name = itemView.findViewById(R.id.name);
@@ -126,18 +132,96 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             Phone_Number = itemView.findViewById(R.id.phone_number);
             Temps_Attente = itemView.findViewById(R.id.temps_attente);
             Temps_Trajet = itemView.findViewById(R.id.temps_trajet);
-            ctx=context;
-            itemView.setOnClickListener(this);
-        }
 
-        @Override
-        public void onClick(View view) {
-            int position = getAdapterPosition();
-            String nom = restaurantsList.get(position).name + " " + restaurantsList.get(position).address;
-            //nom = nom.replaceAll("[�]+","é");
-            ScrollingActivity activity = new ScrollingActivity();
-            activity.showMenu(nom);
+            /*
+            Album.setClickable(true);
+            Album.setFocusableInTouchMode(true);
+            Album.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    CharSequence nom = restaurantsList.get(position).name + " " + restaurantsList.get(position).address;
+                    latitudeRetour = restaurantsList.get(position).getCoordinates().lat;
+                    longitudeRetour = restaurantsList.get(position).getCoordinates().lng;
+                    Toast.makeText(itemView.getContext(), "Position: " + Integer.toString(getAdapterPosition()), Toast.LENGTH_LONG).show();
+                    //nom = nom.replaceAll("[�]+","é");
+                    showMenu(nom);
+                }
+            });*/
+
+            Album.setClickable(true);
+            Album.setFocusableInTouchMode(true);
+            Album.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CharSequence nom = restaurantsList.get(getAdapterPosition()).name + " " + restaurantsList.get(getAdapterPosition()).address;
+                    latitudeRetour = restaurantsList.get(getAdapterPosition()).getCoordinates().lat;
+                    longitudeRetour = restaurantsList.get(getAdapterPosition()).getCoordinates().lng;
+                    Toast.makeText(v.getContext(), "Position: " + Integer.toString(getAdapterPosition()), Toast.LENGTH_LONG).show();
+                    //nom = nom.replaceAll("[�]+","é");
+                    showMenu(nom);
+
+                }
+            });
         }
+    }
+
+    // Méthodes permettant de faire une notification avec un délai dans le temps en millisecondes
+    public void scheduleNotification(Notification notification, int delay) {
+
+        Intent notificationIntent = new Intent(context, NotificationPublisher.class);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+    }
+    public Notification getNotification(String content) {
+        Notification.Builder builder = new Notification.Builder(context);
+        builder.setContentTitle("En route pour une nouvelle aventure !");
+        builder.setContentText(content);
+        builder.setSmallIcon(R.drawable.logo_ping);
+        builder.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
+        return builder.build();
+    }
+    // Méthode permettant de montrer le menu du bas et qui gère
+    private void showMenu(CharSequence name)
+    {
+        content = (String)name;
+        SheetMenu.with(context1)
+                .setTitle("Sélectionnez une application de transport :")
+                .setMenu(R.menu.sheet_menu)
+                .setClick(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        int delay_notification = 3; // Délai en secondes avant que la notification apparaisse
+                        if(menuItem.getItemId() == R.id.City)
+                        {
+                            Toast.makeText(context1, "Citymapper !", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(
+                                    context1,
+                                    Navigation_Citymapper.class
+                            );
+                            // Permettront de montrer à titre d'exemple dans l'activité suivante que ça marche
+                            intent.putExtra("latitudeRetour",latitudeRetour);
+                            intent.putExtra("longitudeRetour",longitudeRetour);
+                            scheduleNotification(getNotification("Il est temps de partir du resto \uD83D\uDE09"), delay_notification*1000);
+                            context.startActivity(intent);
+                        }
+                        else
+                        {
+                            Toast.makeText(context1, "Maps !", Toast.LENGTH_SHORT).show();
+                            Uri gmmIntentUri = Uri.parse("google.navigation:q="+content+",+France&mode=w");
+                            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                            mapIntent.setPackage("com.google.android.apps.maps");
+                            scheduleNotification(getNotification("Il est temps de partir du resto \uD83D\uDE09"), delay_notification*1000);
+                            context1.startActivity(mapIntent);
+                        }
+                        return false;
+                    }
+                }).show();
     }
 
 }

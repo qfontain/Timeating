@@ -95,9 +95,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 public class ScrollingActivity extends Activity {
 
-    private RecyclerView recyclerView;
-    private RecyclerAdapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
+    RecyclerView recyclerView;
+    RecyclerAdapter adapter;
+    RecyclerView.LayoutManager layoutManager;
     ArrayList<Restaurants> arrayList;
     ListView lv;
     List<String> list;
@@ -115,6 +115,7 @@ public class ScrollingActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
 
+        context = getApplicationContext();
         latitudeDepart = getIntent().getDoubleExtra("latitudeDepart",0);
         longitudeDepart = getIntent().getDoubleExtra("longitudeDepart",0);
         latitudeRetour = getIntent().getDoubleExtra("latitudeRetour",0);
@@ -124,6 +125,15 @@ public class ScrollingActivity extends Activity {
                 ScrollingActivity.this, // On part de ça d'où le .this
                 RecyclerAdapter.class // Pour aller vers cette classe
         );
+        intent.putExtra("latitudeRetour",latitudeRetour);
+        intent.putExtra("longitudeRetour",longitudeRetour);
+
+        Intent intent1 = new Intent(
+                ScrollingActivity.this, // On part de ça d'où le .this
+                Navigation_Citymapper.class // Pour aller vers cette classe
+        );
+        intent.putExtra("latitudeDepart",latitudeRetour);
+        intent.putExtra("longitudeDepart",longitudeRetour);
         intent.putExtra("latitudeRetour",latitudeRetour);
         intent.putExtra("longitudeRetour",longitudeRetour);
 
@@ -144,7 +154,7 @@ public class ScrollingActivity extends Activity {
             @Override
             public void run() {
                 for (int i = 0; i < list.size(); i++) {
-                    new ReadJSON().execute("http://192.168.0.40/python.php", list.get(i));
+                    new ReadJSON().execute("http://192.168.43.161/python.php", list.get(i));
                 }
             }
         });
@@ -479,7 +489,7 @@ public class ScrollingActivity extends Activity {
         return resultat + (double) travelTime * 2;
     }
 
-
+/*
     // Méthodes permettant de faire une notification avec un délai dans le temps en millisecondes
     public void scheduleNotification(Notification notification, int delay) {
 
@@ -538,5 +548,5 @@ public class ScrollingActivity extends Activity {
                         return false;
                     }
                 }).show();
-    }
+    }*/
 }
