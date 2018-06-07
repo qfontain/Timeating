@@ -157,7 +157,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     CharSequence nom = restaurantsList.get(getAdapterPosition()).name + " " + restaurantsList.get(getAdapterPosition()).address;
                     latitudeRetour = restaurantsList.get(getAdapterPosition()).getCoordinates().lat;
                     longitudeRetour = restaurantsList.get(getAdapterPosition()).getCoordinates().lng;
-                    Toast.makeText(v.getContext(), "Position: " + Integer.toString(getAdapterPosition()), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(v.getContext(), "Position: " + Integer.toString(getAdapterPosition()), Toast.LENGTH_LONG).show();
                     //nom = nom.replaceAll("[�]+","é");
                     showMenu(nom);
 

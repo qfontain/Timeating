@@ -109,6 +109,9 @@ public class ScrollingActivity extends Activity {
     private double longitudeRetour;
     private final static int FIRST_CALL_ID = 12;
     Context context;
+    ProgressBar progressBar;
+    TextView textView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,8 +150,12 @@ public class ScrollingActivity extends Activity {
         recyclerView.setLayoutManager(layoutManager);
         adapter = new RecyclerAdapter(arrayList,context);
         recyclerView.setAdapter(adapter);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        textView = (TextView)findViewById(R.id.text_view_id);
+
 
         fireYourAsyncTask();
+
 
         runOnUiThread(new Runnable() {
             @Override
@@ -177,11 +184,16 @@ public class ScrollingActivity extends Activity {
 
         @Override
         public void onPreExecute() {
+            super.onPreExecute();
+            if(arrayList.size()==0)
+            {
+                progressBar.setVisibility(View.VISIBLE);
+                textView.setAlpha(1f);
+            }
         }
 
         @Override
         protected String doInBackground(String... params) {
-
             try {
                 URL url = new URL(params[0]);
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -221,6 +233,8 @@ public class ScrollingActivity extends Activity {
                 e.printStackTrace();
             }
             adapter.notifyDataSetChanged();
+            progressBar.setVisibility(View.GONE);
+            textView.setAlpha(0f);//To Hide ProgressBar
         }
     }
 
